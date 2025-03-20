@@ -15,6 +15,9 @@ public class Main {
 		
 		Visitor visitor1 = new Visitor("Ebednezer");
 		Visitor visitor2 = new Visitor("Granite");
+
+		restaurant.addChef(chef1);
+		restaurant.addChef(chef2);
 		
 		Menu mainCourse = new Menu("Main Course");
 		
