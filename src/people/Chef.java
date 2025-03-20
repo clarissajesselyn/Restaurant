@@ -18,8 +18,10 @@ public class Chef {
     }
 
     public void showCookHistory(){
+    	System.out.println();
+    	System.out.println(name + ": ");
         for (String string : cookHistories) {
-            System.out.println("- " + string);
+            System.out.println(" - " + string);
         }
     }
 }

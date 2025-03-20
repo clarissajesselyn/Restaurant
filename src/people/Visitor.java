@@ -1,8 +1,13 @@
 package people;
 
+import java.util.ArrayList;
+
+import main.Food;
+
 public class Visitor {
     private String name;
-    private int totalSpent;
+    private int totalSpent = 0;    
+    private ArrayList<Food> foods = new ArrayList<>();
 
     public Visitor(String name){
         this.name = name;
@@ -12,11 +17,17 @@ public class Visitor {
         return name;
     }
 
-    public void order(double price, int quantity){
-        totalSpent += (int) price*quantity;
+    public void order(Food food, int quantity){
+        totalSpent += (int) food.getPrice()*quantity;
+        foods.add(food);
     }
 
     public void showTotalPrice(){
-        System.out.println("Total price: " + totalSpent);
+    	System.out.println();
+    	System.out.println(name + " ordered: ");
+    	for (Food food : foods) {
+             System.out.println(" - " + food.getName());
+		}
+        System.out.println("   Total price: " + totalSpent);
     }
 }
