@@ -2,7 +2,7 @@ package people;
 
 import java.util.ArrayList;
 
-import main.Food;
+import restaurant.Food;
 
 public class Visitor {
     private String name;
@@ -28,6 +28,6 @@ public class Visitor {
     	for (Food food : foods) {
              System.out.println(" - " + food.getName());
 		}
-        System.out.println("   Total price: " + totalSpent);
+        System.out.println("   Total price: Rp " + totalSpent);
     }
 }
